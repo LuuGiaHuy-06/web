@@ -142,55 +142,6 @@ a[href^="https://takoboto.jp/"] {
     color: var(--mit-3);
 }
 
-/* Styles for smaller screens (e.g., mobile) */
-@media (max-width: 768px) {  /* Adjust 768px as needed */
-    .resize-image {
-      width: 50%; /* Full width on mobile */
-      padding: 10px;
-    }
-    .reset-button {
-        margin-top: 76px;
-    }
-    .source {
-        margin-top: 76px;
-    }
-    /* Example: Change font size on mobile */
-    body {
-      font-size: 18px;
-    }
-    /* Example: Hide elements on mobile */
-    .desktop-only {
-      display: none;
-    }
-}
-
-/* Styles for larger screens (e.g., desktop) */
-@media (min-width: 1080px) { /* Adjust 769px as needed */
-    .resize-image {
-        width: 22%; /* Two columns side-by-side on desktop */
-        margin-right: 2%;
-    }
-    .reset-button {
-        justify-self: right;
-        margin-right: 7%;
-    }
-    .source {
-        justify-self: left;
-        margin-left: 7%;
-    }
-    body {
-        font-family: 'Klee One';
-        font-size: 24px;
-    }
-}
-
-
-
-
-
-
-
-
 
 /* drop down bar */
 * {
@@ -281,4 +232,58 @@ a {
     color: white;
     background-repeat: no-repeat;
     border-radius: 0.5rem;
+}
+
+
+
+/* Styles for smaller screens (e.g., mobile) */
+@media (max-width: 768px) {  /* Adjust 768px as needed */
+    #theme-switch {
+        top: 5vh;
+        right: 20px;
+    }
+    .resize-image {
+      width: 45%; /* Full width on mobile */
+      padding: 10px;
+    }
+    .reset-button {
+        margin-top: 76px;
+    }
+    .source {
+        margin-top: 76px;
+    }
+    /* Example: Change font size on mobile */
+    body {
+      font-size: 18px;
+    }
+    .nav-links {
+        gap: 0rem;
+    }
+    /* Example: Hide elements on mobile */
+    .desktop-only {
+      display: none;
+    }
+    .navbar {
+        padding: 0.25rem 1vh;
+    }
+}
+
+/* Styles for larger screens (e.g., desktop) */
+@media (min-width: 1080px) { /* Adjust 769px as needed */
+    .resize-image {
+        width: 22%; /* Two columns side-by-side on desktop */
+        margin-right: 2%;
+    }
+    .reset-button {
+        justify-self: right;
+        margin-right: 7%;
+    }
+    .source {
+        justify-self: left;
+        margin-left: 7%;
+    }
+    body {
+        font-family: 'Klee One';
+        font-size: 24px;
+    }
 }
