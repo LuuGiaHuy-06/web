@@ -4,6 +4,9 @@
     --mit-3: #005e84;
     /*: black;*/
 }
+.fontLDM {
+    font-family: "Klee One";
+}
 .darkmode{
     --anki-mit-1: #c5168c;
     --anki-mit-2: #480f73;
@@ -21,7 +24,7 @@ body {
     background-color: var(--anki-bg);
     color: var(--anki-text);
 }
-
+/* dark mode switch button */
 button{
     border: none;
     padding: .8em 2em;
@@ -94,6 +97,7 @@ button{
 }
 
 .next-kanji {
+    font-family: "Klee One";
     margin: 5px;
 }
 

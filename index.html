@@ -107,7 +107,14 @@
         let newKanji = ""
         let listIndex = 0
         let link = "takoboto.jp";
-        let currentLevels = [];
+        let currentLevels = [1, 2, 3, 4, 5, 6];
+
+        // for initial login
+        let initial_login = 0;
+        if (initial_login === 0) {
+            getKanji(currentLevels);
+            initial_login = initial_login + 1;
+        }
 
         function getKanji(currentLevels) {
             listIndex = getRandom(currentLevels);
@@ -133,7 +140,7 @@
         document.getElementById("kanji-input").addEventListener("input", function() {
             const input = this.value.trim();
             
-            if (currentKanjiList.includes(input)) {
+            if (newKanji === input) {
                 getKanji(currentLevels);
                 this.value = ""; // Clear input field
             }
@@ -173,10 +180,14 @@
                     targetElement.style.color = "black";
                 }
             });
-            // Show result based on correctness
-            document.getElementById('testing').innerHTML = level;
+            
             currentLevels = [...level];
-            document.getElementById('testingcuren').innerHTML = currentLevels;
+            // Get new Kanji suit with current levels
+            getKanji(currentLevels);
+
+            // Show result based on correctness (debug)
+            //document.getElementById('testing').innerHTML = level;
+            //document.getElementById('testingcuren').innerHTML = currentLevels;
         });
 
 
